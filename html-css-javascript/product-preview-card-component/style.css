@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+	--dark-cyan: #3c8067;
+	--dark-cyan-active: #2c5e4b;
+	--cream: #f2ebe3;
+	--dark-blue: #1c232b;
+	--dark-gray-blue: #6c7289;
+	--white: #fff;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	background-color: var(--cream);
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	font-size: 0.875rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.row {
+	display: flex;
+}
+
+.column {
+	flex: 50%;
+}
+
+.card-container {
+	height: 450px;
+	width: 600px;
+	background-color: var(--white);
+	border-radius: 1rem;
+}
+
+.product-image-container img {
+	height: 100%;
+	width: 100%;
+	border-radius: 1rem 0 0 1rem;
+}
+
+.product-content-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1.2rem;
+	height: 100%;
+}
+
+.product-type {
+	font-family: "Montserrat", sans-serif;
+	font-size: 0.8rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.3rem;
+	color: var(--dark-gray-blue);
+}
+
+.product-name {
+	font-family: "Fraunces", sans-serif;
+	font-size: 2rem;
+	line-height: 2rem;
+	padding-top: 0.75rem;
+	color: var(--dark-blue);
+}
+
+.product-description {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.5rem;
+	padding-top: 1rem;
+	color: var(--dark-gray-blue);
+}
+
+.price-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 40%;
+	padding-top: 1rem;
+	padding-bottom: 1.2rem;
+}
+
+.current-price {
+	font-family: "Fraunces", sans-serif;
+	font-weight: 500;
+	font-size: 2rem;
+	line-height: 2rem;
+	color: var(--dark-cyan);
+}
+
+.previous-price {
+	font-family: "Montserrat", sans-serif;
+	font-size: 0.8rem;
+	text-decoration: line-through;
+	color: var(--dark-gray-blue);
+	margin-left: 1rem;
+}
+
+.btn {
+	font-family: "Montserrat", sans-serif;
+	font-weight: 700;
+	font-size: 0.8rem;
+	line-height: 1rem;
+	border: none;
+	background-color: var(--dark-cyan);
+	color: var(--white);
+	padding: 1rem 5rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+}
+
+button:active {
+	transform: scale(0.99);
+	background-color: var(--dark-cyan-active);
+}
+
+@media (max-width: 600px) {
+	.card-container {
+		display: flex;
+		flex-direction: column;
+		height: 600px;
+		width: 345px;
+	}
+
+	.product-content-container {
+		display: flex;
+		flex-direction: column;
+		padding: 1.2rem;
+		height: 100%;
+	}
+	.product-image-container img {
+		border-radius: 1rem 1rem 0 0;
+	}
+}
