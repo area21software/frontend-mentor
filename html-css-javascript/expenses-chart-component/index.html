@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Expenses Chart</title>
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<div class="balance-container">
+					<div class="balance-info">
+						<p class="balance-text">My balance</p>
+						<p class="balance">$921.48</p>
+					</div>
+					<div class="logo"></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="spending-container">
+					<h2>Spending - Last 7 days</h2>
+					<div class="chart-container">
+						<div class="bar-chart">
+							<div id="mon" class="bar"></div>
+							<p>mon</p>
+						</div>
+						<div class="bar-chart">
+							<div id="tues" class="bar"></div>
+							<p>tues</p>
+						</div>
+						<div class="bar-chart">
+							<div id="wed" class="bar current-day"></div>
+							<p>wed</p>
+						</div>
+						<div class="bar-chart">
+							<div id="thu" class="bar"></div>
+							<p>thu</p>
+						</div>
+						<div class="bar-chart">
+							<div id="fri" class="bar"></div>
+							<p>fri</p>
+						</div>
+						<div class="bar-chart">
+							<div id="sat" class="bar"></div>
+							<p>sat</p>
+						</div>
+						<div class="bar-chart">
+							<div id="sun" class="bar"></div>
+							<p>sun</p>
+						</div>
+					</div>
+					<div class="monthly-total-container">
+						<div class="total-month-info">
+							<p class="total-month-text">Total this month</p>
+							<p class="total">$478.33</p>
+						</div>
+						<div class="previous-month-info">
+							<p class="percent-change">+2.4%</p>
+							<p class="last-month-text">from last month</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

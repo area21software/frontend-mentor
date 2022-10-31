@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--ec-soft-red: hsl(10, 79%, 65%);
+	--ec-soft-red-hover: hsl(10, 70%, 70%);
+	--ec-cyan: hsl(186, 34%, 60%);
+	--ec-dark-brown: hsl(25, 47%, 15%);
+	--ec-medium-brown: hsl(25, 47%, 15%);
+	--ec-cream: hsl(27, 66%, 92%);
+	--ec-card-white: hsl(27, 47%, 96%);
+
+	--ec-border-radius: 10px;
+	--ec-bar-chart-border-radius: 5px;
+}
+
+body {
+	margin: 0;
+	font-family: "DM Sans", sans-serif;
+	height: 100vh;
+	background-color: var(--ec-cream);
+}
+
+p {
+	margin: 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	width: 90%;
+	max-width: 540px;
+	margin: 0 auto;
+}
+
+.balance-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: var(--ec-border-radius);
+	padding: 0.5rem 1.25rem;
+	background-color: var(--ec-soft-red);
+}
+
+.balance-container p {
+	color: var(--ec-cream);
+}
+
+.balance-text {
+	font-size: 0.9rem;
+	padding-bottom: 0.25rem;
+}
+
+.balance {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.logo {
+	width: 5rem;
+	aspect-ratio: 1;
+	background-image: url(./images/logo.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.spending-container {
+	border-radius: var(--ec-border-radius);
+	background-color: var(--ec-card-white);
+}
+
+.spending-container h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+.chart-container {
+	display: flex;
+	justify-content: space-between;
+	height: 11.25rem;
+	width: 90%;
+	padding: 1rem;
+	margin: 0 auto;
+	border-bottom: 2px solid var(--ec-cream);
+}
+
+.bar-chart {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	justify-content: flex-end;
+}
+
+.bar {
+	width: 70%;
+	border-radius: var(--ec-bar-chart-border-radius);
+	background-color: var(--ec-soft-red);
+}
+
+.bar:hover {
+	background-color: var(--ec-soft-red-hover);
+}
+
+.current-day {
+	background-color: var(--ec-cyan);
+}
+
+#mon {
+	height: 20%;
+}
+
+#tues {
+	height: 35%;
+}
+
+#wed {
+	height: 100%;
+}
+
+#thu {
+	height: 30%;
+}
+
+#fri {
+	height: 25%;
+}
+
+#sat {
+	height: 70%;
+}
+
+#sun {
+	height: 28%;
+}
+
+.monthly-total-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 90%;
+	margin: 0 auto;
+	padding: 1.5rem 0;
+}
+
+.total-month-info {
+}
+
+.total-month-text {
+	font-size: 0.9rem;
+	color: var(--ec-medium-brown);
+}
+
+.total {
+	font-size: 1.875rem;
+	font-weight: 700;
+}
+
+.previous-month-info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-top: 1rem;
+}
+
+.percent-change {
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
+.last-month-text {
+	font-size: 0.9rem;
+	color: var(--ec-medium-brown);
+}
