@@ -8,6 +8,7 @@
 	--ec-soft-red: hsl(10, 79%, 65%);
 	--ec-soft-red-hover: hsl(10, 70%, 70%);
 	--ec-cyan: hsl(186, 34%, 60%);
+	--ec-cyan-hover: hsl(187, 35%, 70%);
 	--ec-dark-brown: hsl(25, 47%, 15%);
 	--ec-medium-brown: hsl(25, 47%, 15%);
 	--ec-cream: hsl(27, 66%, 92%);
@@ -15,6 +16,11 @@
 
 	--ec-border-radius: 10px;
 	--ec-bar-chart-border-radius: 5px;
+
+	--ec-small-font-size: 0.9rem;
+	--ec-large-font-size: 1.5rem;
+
+	--ec-font-bold: 700;
 }
 
 body {
@@ -56,12 +62,12 @@ main {
 }
 
 .balance-text {
-	font-size: 0.9rem;
+	font-size: var(--ec-small-font-size);
 	padding-bottom: 0.25rem;
 }
 
 .balance {
-	font-size: 1.5rem;
+	font-size: var(--ec-large-font-size);
 	font-weight: 700;
 }
 
@@ -79,8 +85,11 @@ main {
 }
 
 .spending-container h2 {
-	font-size: 1.5rem;
-	font-weight: 700;
+	font-size: var(--ec-large-font-size);
+	font-weight: var(--ec-font-bold);
+	width: 90%;
+	margin: 0 auto;
+	padding: 1.5rem 0;
 }
 
 .chart-container {
@@ -108,12 +117,18 @@ main {
 	background-color: var(--ec-soft-red);
 }
 
-.bar:hover {
+.bar:hover,
+.bar:focus {
 	background-color: var(--ec-soft-red-hover);
 }
 
 .current-day {
 	background-color: var(--ec-cyan);
+}
+
+.current-day:hover,
+.current-day:focus {
+	background-color: var(--ec-cyan-hover);
 }
 
 #mon {
@@ -154,16 +169,21 @@ main {
 }
 
 .total-month-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
 }
 
 .total-month-text {
-	font-size: 0.9rem;
+	font-size: var(--ec-small-font-size);
 	color: var(--ec-medium-brown);
 }
 
 .total {
 	font-size: 1.875rem;
-	font-weight: 700;
+	font-weight: var(--ec-font-bold);
+	margin-top: 0.25rem;
 }
 
 .previous-month-info {
@@ -174,11 +194,11 @@ main {
 }
 
 .percent-change {
-	font-size: 0.9rem;
-	font-weight: 700;
+	font-size: var(--ec-small-font-size);
+	font-weight: var(--ec-font-bold);
 }
 
 .last-month-text {
-	font-size: 0.9rem;
+	font-size: var(--ec-small-font-size);
 	color: var(--ec-medium-brown);
 }
