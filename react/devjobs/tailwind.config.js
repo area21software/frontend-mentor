@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    darkMode: "class",
     theme: {
         colors: {
             "dj-violet": "hsl(235, 69%, 61%)",
@@ -20,9 +21,25 @@ module.exports = {
             "2xl": ["1.75rem", { lineHeight: "2rem" }],
         },
         fontFamily: {
-            KumbhSans: "Kumbh Sans, sans-serif",
+            "kumbh-sans": "Kumbh Sans, sans-serif",
         },
-        extend: {},
+        extend: {
+            backgroundImage: {
+                "header-pattern-mobile":
+                    "url(./assets/mobile/bg-pattern-header.svg)",
+                "header-pattern-desktop":
+                    "url(./assets/desktop/bg-pattern-header.svg)",
+                "header-pattern-tablet":
+                    "url(./assets/tablet/bg-pattern-header.svg)",
+                logo: "url(./assets/desktop/logo.svg)",
+                moon: "url(./assets/desktop/icon-moon.svg)",
+                sun: "url(./assets/desktop/icon-sun.svg)",
+                filter: "url(./assets/mobile/icon-filter.svg)",
+                search: "url(./assets/desktop/icon-search.svg)",
+                "search-white": "url(./assets/desktop/icon-search-white.svg)",
+                location: "url(./assets/desktop/icon-location.svg)",
+            },
+        },
     },
     plugins: [],
 };
