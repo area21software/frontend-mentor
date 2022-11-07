@@ -1,12 +1,14 @@
 import React from "react";
 
 import Header from "./Header/Header";
+import JobList from "./JobList";
 
 const App = () => {
     return (
-        <div>
+        <>
             <Header />
-        </div>
+            <JobList />
+        </>
     );
 };
 

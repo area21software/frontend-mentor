@@ -12,6 +12,7 @@ module.exports = {
             "dj-light-gray": "hsl(210, 22%, 96%)",
             "dj-gray": "hsl(212, 23%, 69%)",
             "dj-dark-gray": "hsl(214, 17%, 51%)",
+            "dj-scoot": "#E99210",
         },
         fontSize: {
             sm: ["0.825rem", { lineHeight: "1.125rem" }],
@@ -38,6 +39,7 @@ module.exports = {
                 search: "url(./assets/desktop/icon-search.svg)",
                 "search-white": "url(./assets/desktop/icon-search-white.svg)",
                 location: "url(./assets/desktop/icon-location.svg)",
+                scoot: "url(./assets/logos/scoot.svg)",
             },
         },
     },
