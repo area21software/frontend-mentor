@@ -1,11 +1,14 @@
 @tailwind base;
+
+@layer base {
+    body {
+        background-color: #f2f2f2;
+        font-family: "Kumbh Sans", sans-serif;
+    }
+}
+
 @tailwind components;
 @tailwind utilities;
-
-body {
-    background-color: #f2f2f2;
-    font-family: "Kumbh Sans", sans-serif;
-}
 
 .switch {
     position: relative;

@@ -1,8 +1,8 @@
 import React from "react";
 
-import Logo from "../Logo";
+import Logo from "../general/Logo";
 import SearchBox from "./SearchBox";
-import Switch from "../Switch";
+import Switch from "../general/Switch";
 
 const Header = () => {
     return (

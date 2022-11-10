@@ -1,7 +1,7 @@
 import React from "react";
 
-import Header from "./Header/Header";
-import JobList from "./JobList";
+import Header from "./header/Header";
+import JobList from "./jobs-list/JobList";
 
 const App = () => {
     return (

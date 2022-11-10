@@ -6,7 +6,7 @@ module.exports = {
         colors: {
             "dj-violet": "hsl(235, 69%, 61%)",
             "dj-light-violet": "hsl(235, 82%, 77%)",
-            "dj-very-dark-blue": "	hsl(219, 29%, 14%)",
+            "dj-very-dark-blue": "hsl(219, 29%, 14%)",
             "dj-midnight": "hsl(220, 29%, 10%)",
             "dj-white": "hsl(0, 0%, 100%)",
             "dj-light-gray": "hsl(210, 22%, 96%)",
