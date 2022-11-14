@@ -5,6 +5,13 @@ const Switch = () => {
 
     useEffect(() => {
         document.body.classList.toggle("dark", isDarkMode);
+
+        // Tailwind dynamic weirdness
+        if (isDarkMode) {
+            document.body.classList.add("bg-dj-midnight");
+        } else {
+            document.body.classList.remove("bg-dj-midnight");
+        }
     }, [isDarkMode]);
 
     function toggleSwitch() {
