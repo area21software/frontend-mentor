@@ -1,14 +1,14 @@
 import React from "react";
 
 type CompanyLogoProps = {
-    logoPath: string;
+    bgLogo: string;
     logoBackground: string;
 };
 
-const CompanyLogo = ({ logoPath, logoBackground }: CompanyLogoProps) => {
+const CompanyLogo = ({ bgLogo, logoBackground }: CompanyLogoProps) => {
     return (
         <div
-            className={`absolute -top-6 left-8  h-12 w-12 rounded-xl bg-scoot bg-no-repeat bg-center`}
+            className={`absolute -top-6 left-8  h-12 w-12 rounded-xl bg-no-repeat bg-center ${bgLogo}`}
             style={{
                 backgroundColor: `${logoBackground}`,
             }}

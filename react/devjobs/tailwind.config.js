@@ -1,6 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{js,jsx,ts,tsx}"],
+    content: {
+        relative: true,
+        files: ["./src/**/*.{html,js,jsx,ts,tsx}", "./src/index.html"],
+    },
     darkMode: "class",
     theme: {
         colors: {
@@ -39,18 +42,6 @@ module.exports = {
                 search: "url(./assets/desktop/icon-search.svg)",
                 "search-white": "url(./assets/desktop/icon-search-white.svg)",
                 location: "url(./assets/desktop/icon-location.svg)",
-                scoot: "url(./assets/logos/scoot.svg)",
-                blogr: "url(./assets/logos/blogr.svg)",
-                coffee: "url(./assets/logos/coffeeroasters.svg)",
-                creative: "url(./assets/logos/creative.svg)",
-                crowdfund: "url(./assets/logos/crowdfund.svg)",
-                maker: "url(./assets/logos/maker.svg)",
-                mastercraft: "url(./assets/logos/mastercraft.svg)",
-                officelite: "url(./assets/logos/officelite.svg)",
-                pod: "url(./assets/logos/pod.svg)",
-                pomodoro: "url(./assets/logos/pomodoro.svg)",
-                typemaster: "url(./assets/logos/typemaster.svg)",
-                vector: "url(./assets/logos/vector.svg)",
             },
         },
     },

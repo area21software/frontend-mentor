@@ -68,3 +68,49 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+/* Unable to find easier way to load svg dynamically with Tailwind and Parcel */
+.bg-Scoot {
+    background-image: url("./assets/logos/scoot.svg");
+}
+.bg-Blogr {
+    background-image: url("./assets/logos/blogr.svg");
+}
+.bg-Crowdfund {
+    background-image: url("./assets/logos/crowdfund.svg");
+}
+.bg-Vector {
+    background-image: url("./assets/logos/vector.svg");
+}
+
+.bg-Creative {
+    background-image: url("./assets/logos/creative.svg");
+}
+
+.bg-Coffeeroasters {
+    background-image: url("./assets/logos/coffeeroasters.svg");
+}
+
+.bg-Maker {
+    background-image: url("./assets/logos/maker.svg");
+}
+
+.bg-Typemaster {
+    background-image: url("./assets/logos/typemaster.svg");
+}
+
+.bg-Pomodoro {
+    background-image: url("./assets/logos/pomodoro.svg");
+}
+
+.bg-Office-Lite {
+    background-image: url("./assets/logos/officelite.svg");
+}
+
+.bg-Pod {
+    background-image: url("./assets/logos/pod.svg");
+}
+
+.bg-Mastercraft {
+    background-image: url("./assets/logos/mastercraft.svg");
+}
