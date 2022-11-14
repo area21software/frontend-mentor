@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
-const SearchBox = () => {
+type SearchBoxProps = {
+    handleTitleChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    handleLocationChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
+
+const SearchBox = ({
+    handleTitleChange,
+    handleLocationChange,
+}: SearchBoxProps) => {
     return (
         <div className="absolute left-7 right-7 top-24 bg-dj-white dark:bg-dj-very-dark-blue p-3 rounded-md">
             <div className="hidden md:flex items-center justify-between h-full">
@@ -9,6 +17,7 @@ const SearchBox = () => {
                     <input
                         className="text-dj-gray text-md  dark:bg-dj-very-dark-blue"
                         placeholder="Filter by title..."
+                        onChange={handleTitleChange}
                     />
                 </div>
                 <div className="flex justify-evenly w-full border-r border-b-dj-light-gray">
@@ -17,6 +26,7 @@ const SearchBox = () => {
                         className="text-dj-gray dark:bg-dj-very-dark-blue text-md"
                         type="text"
                         placeholder="Filter by location..."
+                        onChange={handleLocationChange}
                     />
                 </div>
                 <div className="flex items-center w-full justify-evenly">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import JobCard from "./JobCard";
 
 import { Job } from "../../models/Job";
