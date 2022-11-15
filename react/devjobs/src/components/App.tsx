@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import data from "../data/data.json";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Header from "./header/Header";
+import JobDetail from "./jobs-list/JobDetail";
 import JobList from "./jobs-list/JobList";
+import Header from "./header/Header";
 
 import { Job } from "../models/Job";
+import data from "../data/data.json";
 
 const App = () => {
     const [jobs, setJobs] = useState<Job[]>([]);
@@ -37,7 +39,16 @@ const App = () => {
                 handleTitleChange={handleTitleChange}
                 handleLocationChange={handleLocationChange}
             />
-            <JobList jobs={search(jobs)} />
+
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        path="/jobs"
+                        element={<JobList jobs={search(jobs)} />}
+                    />
+                    <Route path="/job/:id" element={<JobDetail />} />
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 };

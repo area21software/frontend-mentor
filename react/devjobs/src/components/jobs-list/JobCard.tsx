@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Job } from "../../models/Job";
 import CompanyLogo from "./CompanyLogo";
 
@@ -7,9 +8,19 @@ type JobCardProps = {
 };
 
 const JobCard = ({ job }: JobCardProps) => {
+    const navigate = useNavigate();
     const bgLogo = ("bg-" + job.company).replace(" ", "-");
+
+    const handleClick = () => {
+        navigate(`/job/${job.id}`, { state: job });
+    };
+
     return (
-        <div className="relative bg-dj-white dark:bg-dj-very-dark-blue rounded-md">
+        // eslint-disable-next-line
+        <div
+            className="relative bg-dj-white dark:bg-dj-very-dark-blue rounded-md cursor-pointer"
+            onClick={handleClick}
+        >
             <CompanyLogo bgLogo={bgLogo} logoBackground={job.logoBackground} />
             <div className="flex flex-col pl-9 pt-9 pb-9 h-full">
                 <div className="flex items-center justify-between w-36 mb-3">
