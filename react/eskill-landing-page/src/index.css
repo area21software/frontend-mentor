@@ -6,4 +6,7 @@
   .gradient1 {
     @apply bg-gradient-to-b from-eOrange to-ePink;
   }
+  .gradient2 {
+    @apply bg-gradient-to-b from-ePurple to-ePink;
+  }
 }

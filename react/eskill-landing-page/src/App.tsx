@@ -1,6 +1,13 @@
-import Logo from "./assets/logo-dark.svg"
+import DarkLogo from "./assets/logo-dark.svg"
+import LightLogo from "./assets/logo-light.svg"
 import MobileHero from "./assets/image-hero-mobile.png"
 import Animation from "./assets/icon-animation.svg"
+import Design from "./assets/icon-design.svg"
+import Crypto from "./assets/icon-crypto.svg"
+import Business from "./assets/icon-business.svg"
+import Photography from "./assets/icon-photography.svg"
+
+import SkillCard from "./SkillCard"
 
 const App = () => {
   return (
@@ -9,7 +16,7 @@ const App = () => {
         {/* Header */}
         <div className="flex justify-between items-center">
           <div>
-            <img src={Logo} className="h-6" />
+            <img src={DarkLogo} className="h-6" />
           </div>
           <button className="bg-darkBlue text-white px-6 p-3  rounded-full">
             Get Started
@@ -40,38 +47,47 @@ const App = () => {
           <h3 className="gradient1 px-8 pt-6 pb-8 text-hs text-white font-extrabold rounded-lg">
             Check out our most popular courses!
           </h3>
-          {/* Skill Card */}
-          <div className="relative bg-white rounded-lg drop-shadow-sm mt-10">
-            <img src={Animation} className="absolute -top-7 left-7" />
-            <div className="px-7 pt-14 pb-8">
-              <h4 className="text-hs font-extrabold">Animation</h4>
-              <p className="text-bs font-medium text-grayBlue mt-4">
-                Learn the latest animation techniques to create stunning motion
-                design and captivate your audience.
-              </p>
-              <a href="#" className="block text-ePink text-bm font-bold mt-6">
-                Get Started
-              </a>
-            </div>
-          </div>
-          {/* Skill Card */}
-          {/* Skill Card */}
-          <div className="relative bg-white rounded-lg drop-shadow-sm mt-10">
-            <img src={Animation} className="absolute -top-7 left-7" />
-            <div className="px-7 pt-14 pb-8">
-              <h4 className="text-hs font-extrabold">Animation</h4>
-              <p className="text-bs font-medium text-grayBlue mt-4">
-                Learn the latest animation techniques to create stunning motion
-                design and captivate your audience.
-              </p>
-              <a href="#" className="block text-ePink text-bm font-bold mt-6">
-                Get Started
-              </a>
-            </div>
-          </div>
-          {/* Skill Card */}
+          <SkillCard
+            icon={Animation}
+            skill="Animation"
+            description="Learn the latest animation techniques to create stunning motion design and captivate your audience."
+          />
+
+          <SkillCard
+            icon={Design}
+            skill="Design"
+            description="Create beautiful, usable interfaces to help shape the future of how the web looks."
+          />
+
+          <SkillCard
+            icon={Photography}
+            skill="Photography"
+            description="Explore critical fundamentals like lighting, composition, and focus to capture exceptional photos."
+          />
+
+          <SkillCard
+            icon={Crypto}
+            skill="Crypto"
+            description="All you need to know to get started investing in crypto. Go from beginner to advanced with this 54 hour course."
+          />
+
+          <SkillCard
+            icon={Business}
+            skill="Business"
+            description="A step-by-step playbook to help you start, scale, and sustain your business without outside investment."
+          />
         </div>
       </div>
+      <footer className="flex justify-center h-32 bg-darkBlue">
+        <div className="flex w-full items-center justify-between mx-4">
+          <div>
+            <img src={LightLogo} className="h-6" />
+          </div>
+          <button className="gradient2 text-white px-6 p-3  rounded-full">
+            Get Started
+          </button>
+        </div>
+      </footer>
     </div>
   )
 }

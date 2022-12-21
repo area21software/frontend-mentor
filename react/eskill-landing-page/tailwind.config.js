@@ -9,6 +9,7 @@ module.exports = {
         grayBlue: "#83869A",
         ePink: "#F02AA6",
         eOrange: "#FF6F48",
+        ePurple: "#4851FF",
         offWhite: "#FAF9F6",
       },
       fontSize: {
