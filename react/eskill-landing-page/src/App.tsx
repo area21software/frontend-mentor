@@ -10,7 +10,6 @@ const App = () => {
     <div className="relative font-plus-jakarta-sans bg-offWhite">
       <div className=" pt-6 px-6 mx-auto max-w-[1200px]">
         <Header />
-        {/* Section */}
         <section className="mt-10 md:flex">
           <div className="w-full md:mt-24 lg:mt-48 max-w-[398px]">
             <h1 className="text-hl font-extrabold">
@@ -24,14 +23,20 @@ const App = () => {
               Get Started
             </button>
           </div>
-          {/* Mobile Hero */}
           <div>
             <img src={MobileHero} className="mt-12 md:hidden" />
           </div>
-          {/* Mobile Hero */}
+          <div className="w-full">
+            <img
+              src={TabletHero}
+              className="hidden md:block lg:hidden absolute -top-24 -right-78"
+            />
+            <img
+              src={DesktopHero}
+              className="hidden md:hidden lg:block absolute -top-40 -right-32"
+            />
+          </div>
         </section>
-        {/* Section */}
-        {/* Skills Section */}
         <section className="md:grid grid-cols-2 gap-2 lg:grid lg:grid-cols-3 lg:gap-4 md:mt-48 ">
           <SkillList />
         </section>
@@ -41,14 +46,3 @@ const App = () => {
 }
 
 export default App
-
-//   <div className="w-full">
-//   <img
-//     src={TabletHero}
-//     className="hidden md:block lg:hidden absolute -top-24 -right-78"
-//   />
-//   <img
-//     src={DesktopHero}
-//     className="hidden md:hidden lg:block absolute -top-40 -right-32"
-//   />
-// </div>
