@@ -1,14 +1,16 @@
 import { useState } from "react"
 import { HiMenuAlt3 } from "react-icons/hi"
+import { AiOutlineClose } from "react-icons/ai"
 
 import NavigationBar from "./NavigationBar"
 
 const App = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
+
   const toggle = () => {
-    console.log("Toggle")
     setIsOpen((prev) => !prev)
   }
+
   return (
     <div className="font-jost">
       <div className="relative">
@@ -18,9 +20,11 @@ const App = () => {
               <p className="font-bold text-b2 text-white">Frontend Mentor</p>
               <p className="text-b3 text-pfOffWhite">Feedback Board</p>
             </div>
-            <button onClick={toggle}>
-              <HiMenuAlt3 className="h-6 w-6 text-white" />
-            </button>
+            {isOpen ? (
+              <AiOutlineClose onClick={toggle} className="h-6 w-6 text-white" />
+            ) : (
+              <HiMenuAlt3 onClick={toggle} className="h-6 w-6 text-white" />
+            )}
           </div>
         </header>
         <NavigationBar isOpen={isOpen} />
