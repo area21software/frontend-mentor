@@ -1,0 +1,9 @@
+node_modules/
+.parcel-cache/
+dist/
+.env
+
+vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
