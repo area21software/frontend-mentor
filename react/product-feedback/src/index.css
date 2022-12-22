@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.gradient1 {
+  @apply bg-gradient-to-bl from-pfLightBlue via-pfDarkPink to-pfOrange;
+}
+
+.smooth-transition {
+  transition: all 0.3s ease-in-out;
+}
