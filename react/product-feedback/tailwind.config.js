@@ -11,6 +11,8 @@ module.exports = {
         pfOrange: "hsl(14, 83%, 74%)",
         pfLightBlue: "hsl(204, 94%, 68%)",
         pfGrey: "hsl(224, 20%, 49%)",
+        pfDarkBlueGrey1: "hsl()230, 31%, 31%",
+        pfDarkBlueGrey2: "hsl(231, 33%, 34%)",
       },
       fontFamily: {
         jost: "Jost, sans-serif",
@@ -23,12 +25,6 @@ module.exports = {
         b1: ["1rem", { lineHeight: "23px" }],
         b2: ["0.9375rem", { lineHeight: "22px" }],
         b3: ["0.8125rem", { lineHeight: "19px" }],
-      },
-      animation: {
-        slideleft: {
-          from: { opacity: 0, transform: "translateX(-20px)" },
-          to: { opacity: 1, transform: "translateX(0)" },
-        },
       },
     },
   },

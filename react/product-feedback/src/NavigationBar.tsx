@@ -7,22 +7,19 @@ type NavigationBarProps = {
 
 const NavigationBar = ({ isOpen }: NavigationBarProps) => {
   return (
-    <div className="relative">
+    <>
       <div
-        className={`relative  top-0 ${
+        className={`${isOpen ? "h-screen bg-black/30 z-10" : "hidden"}`}
+      ></div>
+      <div
+        className={`absolute top-0 right-0 h-screen z-20 w-3/4 bg-pfOffWhite smooth-transition ${
           isOpen ? "right-0" : "-right-full"
-        }  w-full h-screen bg-black/30`}
+        }`}
       >
-        <div
-          className={`absolute top right-0 h-screen z-10 w-3/4 bg-pfOffWhite  ${
-            isOpen ? "right-0" : "-right-full"
-          } smooth-transition`}
-        >
-          <FilterCard />
-          <RoadmapCard />
-        </div>
+        <FilterCard />
+        <RoadmapCard />
       </div>
-    </div>
+    </>
   )
 }
 
