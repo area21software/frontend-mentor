@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* body {
+  height: 100vh;
+} */
+
+#root {
+  height: 100vh;
+}
+
 .gradient1 {
   @apply bg-gradient-to-bl from-pfLightBlue via-pfDarkPink to-pfOrange;
 }

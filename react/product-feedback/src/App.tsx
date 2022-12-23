@@ -2,13 +2,21 @@ import { useState } from "react"
 import { HiMenuAlt3 } from "react-icons/hi"
 import { AiOutlineClose } from "react-icons/ai"
 
-import NavigationBar from "./NavigationBar"
-import SuggestionHeader from "./SuggestionHeader"
-import FeedbackCard from "./FeedbackCard"
+import { Request } from "./model/Request"
+
+import NavigationBar from "./components/NavigationBar"
+import SuggestionHeader from "./components/SuggestionHeader"
+import FeedbackCard from "./components/FeedbackCard"
+import EmptyFeedback from "./components/EmptyFeedback"
+
+const data = require("./data.json")
 
 const App = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+
+  const productFeedbackRequests: Request[] = data.productRequests
+  //   const productFeedbackRequests: Request[] = []
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen((prev) => !prev)
@@ -19,8 +27,8 @@ const App = () => {
   }
 
   return (
-    <div className="font-jost bg-pfOffWhite">
-      <div className="">
+    <div className="font-jost min-h-full bg-pfOffWhite">
+      <div className="content">
         <header className="flex gradient1 h-20 bg-red-600">
           <div className="flex items-center justify-between w-full px-6">
             <div>
@@ -46,20 +54,19 @@ const App = () => {
         >
           <NavigationBar isOpen={isMobileNavOpen} />
         </SuggestionHeader>
-      </div>
-      <div className="flex flex-col px-6 pt-8 pb-16">
-        <FeedbackCard />
-        <FeedbackCard />
-        <FeedbackCard />
-        <FeedbackCard />
-        <FeedbackCard />
+
+        <div className="flex flex-col px-6 pt-8 pb-16">
+          {productFeedbackRequests.length === 0 ? (
+            <EmptyFeedback />
+          ) : (
+            productFeedbackRequests.map((request) => (
+              <FeedbackCard key={request.id} feedbackRequest={request} />
+            ))
+          )}
+        </div>
       </div>
     </div>
   )
 }
 
 export default App
-
-/*
-
-*/
