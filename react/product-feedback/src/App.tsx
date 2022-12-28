@@ -5,7 +5,7 @@ import Home from "./components/Home"
 
 const App = () => {
   return (
-    <div className="font-jost min-h-full bg-pfOffWhite">
+    <div className="font-jost min-h-full bg-pfOffWhite overflow-x-hidden">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/feedback/:id" element={<FeedbackDetail />} />
