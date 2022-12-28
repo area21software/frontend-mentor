@@ -9,6 +9,8 @@ import NavigationBar from "./NavigationBar"
 import SuggestionHeader from "./SuggestionHeader"
 import FeedbackCard from "./FeedbackCard"
 import EmptyFeedback from "./EmptyFeedback"
+import FilterCard from "./FilterCard"
+import RoadmapCard from "./RoadmapCard"
 
 const data = require("../data.json")
 
@@ -27,8 +29,8 @@ const Home = () => {
   }
   return (
     <>
-      <header className="flex gradient1 h-20 bg-red-600">
-        <div className="flex items-center justify-between w-full px-6">
+      <header className="sm:hidden flex gradient1 h-20">
+        <div className="flex items-center justify-between w-full px-6 sm:hidden">
           <div>
             <p className="font-bold text-b2 text-white">Frontend Mentor</p>
             <p className="text-b3 text-pfOffWhite">Feedback Board</p>
@@ -46,9 +48,20 @@ const Home = () => {
           )}
         </div>
       </header>
+
+      <div className="hidden sm:flex h-44 justify-between sm:px-6 sm:pt-12">
+        <div className="gradient1 w-56 rounded-lg">
+          <p className="font-bold text-b2 text-white">Frontend Mentor</p>
+          <p className="text-b3 text-pfOffWhite">Feedback Board</p>
+        </div>
+        <FilterCard />
+        <RoadmapCard />
+      </div>
+
       <SuggestionHeader
         isDropdownOpen={isDropdownOpen}
         toggleDropdown={toggleDropdown}
+        suggestionCount={productFeedbackRequests.length}
       >
         <NavigationBar isOpen={isMobileNavOpen} />
       </SuggestionHeader>
