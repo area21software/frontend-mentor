@@ -1,5 +1,5 @@
 export interface User {
-  imagePath: string
+  image: string
   name: string
   username: string
 }
