@@ -1,6 +1,6 @@
 const RoadmapCard = () => {
   return (
-    <div className="bg-white rounded-lg h-56 mx-6 mt-6 sm:mx-0 sm:mt-0 sm:w-56 sm:h-44">
+    <div className="bg-white rounded-lg w-56 mt-6 sm:mx-0 sm:mt-0">
       <div className="p-6">
         <div className="flex w-full justify-between">
           <h2 className="font-bold text-hs">Roadmap</h2>
@@ -8,7 +8,7 @@ const RoadmapCard = () => {
             View
           </button>
         </div>
-        <div className="mt-8">
+        <div className="mt-6">
           <div className="flex w-full items-center mt-2">
             <span className="h-2 w-2 rounded-full bg-pfOrange mr-2" />
             <p className="text-b1 text-pfGrey">Planned</p>

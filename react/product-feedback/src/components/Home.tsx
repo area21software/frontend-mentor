@@ -49,10 +49,12 @@ const Home = () => {
         </div>
       </header>
 
-      <div className="hidden sm:flex h-44 justify-between sm:px-6 sm:pt-12">
-        <div className="gradient1 w-56 rounded-lg">
-          <p className="font-bold text-b2 text-white">Frontend Mentor</p>
-          <p className="text-b3 text-pfOffWhite">Feedback Board</p>
+      <div className="hidden sm:h-48 sm:flex justify-between sm:px-6 sm:mt-12">
+        <div className="flex flex-col justify-end gradient1 w-56 rounded-lg">
+          <div className="pl-6 pb-6">
+            <p className="font-bold text-hm text-white">Frontend Mentor</p>
+            <p className="text-b2 text-pfOffWhite">Feedback Board</p>
+          </div>
         </div>
         <FilterCard />
         <RoadmapCard />

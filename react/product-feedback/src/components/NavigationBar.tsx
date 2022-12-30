@@ -16,8 +16,10 @@ const NavigationBar = ({ isOpen }: NavigationBarProps) => {
           isOpen ? "right-0" : "-right-full"
         }`}
       >
-        <FilterCard />
-        <RoadmapCard />
+        <div className="flex flex-col h-full w-full items-center">
+          <FilterCard />
+          <RoadmapCard />
+        </div>
       </div>
     </>
   )
