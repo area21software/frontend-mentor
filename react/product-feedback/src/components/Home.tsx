@@ -18,7 +18,8 @@ const Home = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
-  const productFeedbackRequests: Request[] = data.productRequests
+  const productFeedbackRequests: Request[] = []
+  //   const productFeedbackRequests: Request[] = data.productRequests
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen((prev) => !prev)
@@ -28,7 +29,7 @@ const Home = () => {
     setIsDropdownOpen((prev) => !prev)
   }
   return (
-    <div className="flex flex-col lg:flex-row overflow-x-hidden max-w-[1080px] mx-auto">
+    <div className="flex flex-col lg:flex-row overflow-hidden max-w-[1080px] mx-auto">
       <header className="sm:hidden flex gradient1 h-20">
         <div className="flex items-center justify-between w-full px-6 sm:hidden">
           <div>

@@ -2,7 +2,7 @@ import Empty from "../assets/illustration-empty.svg"
 
 const EmptyFeedback = () => {
   return (
-    <div className="flex flex-col items-center  bg-white rounded-lg">
+    <div className="flex flex-col items-center  bg-white rounded-lg overflow-y-hidden">
       <div className="flex flex-col items-center px-6 pt-20 pb-20 max-w-[410px]">
         <img src={Empty} className="h-28 w-28" />
         <div className="flex flex-col items-center">
