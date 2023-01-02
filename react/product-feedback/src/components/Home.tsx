@@ -28,7 +28,7 @@ const Home = () => {
     setIsDropdownOpen((prev) => !prev)
   }
   return (
-    <>
+    <div className="flex flex-col lg:flex-row overflow-x-hidden max-w-[1080px] mx-auto">
       <header className="sm:hidden flex gradient1 h-20">
         <div className="flex items-center justify-between w-full px-6 sm:hidden">
           <div>
@@ -49,8 +49,8 @@ const Home = () => {
         </div>
       </header>
 
-      <div className="hidden sm:h-48 sm:flex justify-between sm:px-6 sm:mt-12">
-        <div className="flex flex-col justify-end gradient1 w-56 rounded-lg">
+      <div className="hidden sm:h-48 sm:flex sm:justify-between sm:px-6 sm:mt-12 lg:flex-col lg:h-full">
+        <div className="flex flex-col justify-end gradient1 w-56 rounded-lg lg:h-36">
           <div className="pl-6 pb-6">
             <p className="font-bold text-hm text-white">Frontend Mentor</p>
             <p className="text-b2 text-pfOffWhite">Feedback Board</p>
@@ -60,24 +60,26 @@ const Home = () => {
         <RoadmapCard />
       </div>
 
-      <SuggestionHeader
-        isDropdownOpen={isDropdownOpen}
-        toggleDropdown={toggleDropdown}
-        suggestionCount={productFeedbackRequests.length}
-      >
-        <NavigationBar isOpen={isMobileNavOpen} />
-      </SuggestionHeader>
+      <div className="w-full">
+        <SuggestionHeader
+          isDropdownOpen={isDropdownOpen}
+          toggleDropdown={toggleDropdown}
+          suggestionCount={productFeedbackRequests.length}
+        >
+          <NavigationBar isOpen={isMobileNavOpen} />
+        </SuggestionHeader>
 
-      <div className="flex flex-col px-6 pt-8 pb-16">
-        {productFeedbackRequests.length === 0 ? (
-          <EmptyFeedback />
-        ) : (
-          productFeedbackRequests.map((request) => (
-            <FeedbackCard key={request.id} feedbackRequest={request} />
-          ))
-        )}
+        <div className="flex flex-col px-6 pt-6 pb-16">
+          {productFeedbackRequests.length === 0 ? (
+            <EmptyFeedback />
+          ) : (
+            productFeedbackRequests.map((request) => (
+              <FeedbackCard key={request.id} feedbackRequest={request} />
+            ))
+          )}
+        </div>
       </div>
-    </>
+    </div>
   )
 }
 

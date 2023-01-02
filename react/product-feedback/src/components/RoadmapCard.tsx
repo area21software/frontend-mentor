@@ -1,6 +1,6 @@
 const RoadmapCard = () => {
   return (
-    <div className="bg-white rounded-lg w-56 mt-6 sm:mx-0 sm:mt-0">
+    <div className="bg-white rounded-lg w-56 mt-6 sm:mx-0 sm:mt-0 lg:mt-8">
       <div className="p-6">
         <div className="flex w-full justify-between">
           <h2 className="font-bold text-hs">Roadmap</h2>

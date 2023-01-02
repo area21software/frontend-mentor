@@ -18,7 +18,7 @@ const SuggestionHeader = ({
   suggestionCount,
 }: SuggestionProps) => {
   return (
-    <div className="relative bg-pfDarkBlueGrey2 h-14 sm:mt-10 sm:rounded-lg sm:mx-6">
+    <div className="relative bg-pfDarkBlueGrey2 h-14 sm:mt-12 sm:rounded-lg sm:mx-6">
       <div className="flex items-center justify-between py-2 px-6">
         <div className="hidden sm:flex items-center text-white ml-6">
           <RiLightbulbFlashLine className="h-6 w-6 mr-4" />
