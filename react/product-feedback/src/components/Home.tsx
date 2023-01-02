@@ -18,8 +18,8 @@ const Home = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
 
-  const productFeedbackRequests: Request[] = []
-  //   const productFeedbackRequests: Request[] = data.productRequests
+  //   const productFeedbackRequests: Request[] = []
+  const productFeedbackRequests: Request[] = data.productRequests
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen((prev) => !prev)
