@@ -3,6 +3,7 @@ import { ReactNode } from "react"
 import { IoIosArrowDown } from "react-icons/io"
 import { IoIosArrowUp } from "react-icons/io"
 import { RiLightbulbFlashLine } from "react-icons/ri"
+import { useNavigate } from "react-router-dom"
 
 type SuggestionProps = {
   children?: ReactNode
@@ -17,6 +18,8 @@ const SuggestionHeader = ({
   isDropdownOpen,
   suggestionCount,
 }: SuggestionProps) => {
+  const navigate = useNavigate()
+
   return (
     <div className="relative bg-pfDarkBlueGrey2 h-14 sm:mt-12 sm:rounded-lg sm:mx-6">
       <div className="flex items-center justify-between py-2 px-6">
@@ -42,7 +45,10 @@ const SuggestionHeader = ({
             )}
           </span>
         </button>
-        <button className="text-b3 font-semibold w- text-white bg-pfDarkPink px-4 py-2 rounded-lg">
+        <button
+          className="text-b3 font-semibold w- text-white bg-pfDarkPink px-4 py-2 rounded-lg"
+          onClick={() => navigate("/feedback")}
+        >
           + Add Feedback
         </button>
       </div>

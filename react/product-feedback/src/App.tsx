@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom"
 import FeedbackDetail from "./components/FeedbackDetail"
+import FeedbackForm from "./components/FeedbackForm"
 
 import Home from "./components/Home"
 
@@ -8,6 +9,7 @@ const App = () => {
     <div className="font-jost min-h-full bg-pfOffWhite">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="/feedback/:id" element={<FeedbackDetail />} />
       </Routes>
     </div>

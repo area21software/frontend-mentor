@@ -11,10 +11,10 @@ const FeedbackDetail = () => {
     <div className="p-6">
       <div className="flex justify-between">
         <button
-          className="flex items-center text-pfGrey font-bold"
+          className="flex items-center text-pfGrey font-bold text-b3"
           onClick={() => navigate(-1)}
         >
-          <IoIosArrowBack className="fill-pfDarkBlue mr-2 " />
+          <IoIosArrowBack className="fill-pfDarkBlue mr-2" />
           Go Back
         </button>
         <button className="text-b3 font-bold w- text-white bg-pfDarkBlue px-4 py-2 rounded-lg">
