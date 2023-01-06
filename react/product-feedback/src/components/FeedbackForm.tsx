@@ -108,11 +108,11 @@ const FeedbackForm = () => {
               </p>
               <textarea className="h-32 bg-pfOffWhite rounded-lg mt-4" />
             </div>
-            <div className="flex flex-col space-y-2 mt-10 pb-6">
-              <button className="bg-pfDarkPink text-white py-2 rounded-xl">
+            <div className="flex flex-col space-y-2 mt-10 pb-6 md:flex-row md:space-y-0 md:justify-end">
+              <button className="bg-pfDarkPink text-white py-2 md:px-6 rounded-xl md:order-2">
                 Add Feedback
               </button>
-              <button className="bg-pfDarkBlueGrey2 text-white py-2 rounded-xl">
+              <button className="bg-pfDarkBlueGrey2 text-white py-2 md:px-6 md:mr-4 rounded-xl">
                 Cancel
               </button>
             </div>
