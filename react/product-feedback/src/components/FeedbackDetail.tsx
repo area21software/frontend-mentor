@@ -1,5 +1,5 @@
 import { IoIosArrowBack } from "react-icons/io"
-import { useLocation, useNavigate } from "react-router-dom"
+import { useLocation, useNavigate, Link } from "react-router-dom"
 
 import FeedbackCard from "./FeedbackCard"
 import Comments from "./Comments"
@@ -8,7 +8,7 @@ const FeedbackDetail = () => {
   const navigate = useNavigate()
   const { state: feedbackRequest } = useLocation()
   return (
-    <div className="p-6">
+    <div className="p-6 max-w-[730px] m-auto">
       <div className="flex justify-between">
         <button
           className="flex items-center text-pfGrey font-bold text-b3"
@@ -17,9 +17,13 @@ const FeedbackDetail = () => {
           <IoIosArrowBack className="fill-pfDarkBlue mr-2" />
           Go Back
         </button>
-        <button className="text-b3 font-bold w- text-white bg-pfDarkBlue px-4 py-2 rounded-lg">
+        <Link
+          to={`edit`}
+          className="text-b3 font-bold w- text-white bg-pfDarkBlue px-4 py-2 rounded-lg"
+          state={feedbackRequest}
+        >
           Edit Feedback
-        </button>
+        </Link>
       </div>
       <FeedbackCard feedbackRequest={feedbackRequest} />
       {feedbackRequest.comments && (
