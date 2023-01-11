@@ -1,6 +1,10 @@
 import Empty from "../assets/illustration-empty.svg"
 
+import { useNavigate } from "react-router-dom"
+
 const EmptyFeedback = () => {
+  const navigate = useNavigate()
+
   return (
     <div className="flex flex-col items-center  bg-white rounded-lg overflow-y-hidden">
       <div className="flex flex-col items-center px-6 pt-20 pb-20 max-w-[410px]">
@@ -13,7 +17,10 @@ const EmptyFeedback = () => {
             Got a suggestion? Found a bug that needs to be squashed? We love
             hearing about new ideas to improve our app.
           </p>
-          <button className="text-b3 font-semibold w- text-white bg-pfDarkPink px-4 py-2 mt-6 rounded-lg">
+          <button
+            className="text-b3 font-semibold w- text-white bg-pfDarkPink px-4 py-2 mt-6 rounded-lg"
+            onClick={() => navigate("/feedback")}
+          >
             + Add Feedback
           </button>
         </div>

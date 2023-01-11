@@ -3,9 +3,13 @@ import RoadmapCard from "./RoadmapCard"
 
 type NavigationBarProps = {
   isOpen: boolean
+  handleSelectCategory: (selectedCatgory: string) => void
 }
 
-const NavigationBar = ({ isOpen }: NavigationBarProps) => {
+const NavigationBar = ({
+  isOpen,
+  handleSelectCategory,
+}: NavigationBarProps) => {
   return (
     <>
       <div
@@ -17,7 +21,7 @@ const NavigationBar = ({ isOpen }: NavigationBarProps) => {
         }`}
       >
         <div className="flex flex-col h-full w-full items-center">
-          <FilterCard />
+          <FilterCard handleSelectCategory={handleSelectCategory} />
           <RoadmapCard />
         </div>
       </div>

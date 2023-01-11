@@ -17,6 +17,7 @@ const data = require("../data.json")
 const Home = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+  const [filteredRequests, setFilteredRequests] = useState(data.productRequests)
 
   //   const productFeedbackRequests: Request[] = []
   const productFeedbackRequests: Request[] = data.productRequests
@@ -28,8 +29,25 @@ const Home = () => {
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev)
   }
+
+  function handleSelectCategory(selectedCategory: string) {
+    if (selectedCategory === "all") {
+      setFilteredRequests(productFeedbackRequests)
+    } else {
+      const filteredRequests = productFeedbackRequests.filter(
+        (request) =>
+          request.category.toLowerCase() === selectedCategory.toLowerCase()
+      )
+      setFilteredRequests(filteredRequests)
+    }
+  }
+
   return (
-    <div className="flex flex-col lg:flex-row overflow-hidden max-w-[1080px] mx-auto">
+    <div
+      className={`flex flex-col lg:flex-row overflow-hidden max-w-[1080px] mx-auto ${
+        isMobileNavOpen ? "fixed" : ""
+      }`}
+    >
       <header className="sm:hidden flex gradient1 h-20">
         <div className="flex items-center justify-between w-full px-6 sm:hidden">
           <div>
@@ -57,7 +75,7 @@ const Home = () => {
             <p className="text-b2 text-pfOffWhite">Feedback Board</p>
           </div>
         </div>
-        <FilterCard />
+        <FilterCard handleSelectCategory={handleSelectCategory} />
         <RoadmapCard />
       </div>
 
@@ -67,14 +85,21 @@ const Home = () => {
           toggleDropdown={toggleDropdown}
           suggestionCount={productFeedbackRequests.length}
         >
-          <NavigationBar isOpen={isMobileNavOpen} />
+          <NavigationBar
+            isOpen={isMobileNavOpen}
+            handleSelectCategory={handleSelectCategory}
+          />
         </SuggestionHeader>
 
-        <div className="flex flex-col px-6 pt-6 pb-16">
-          {productFeedbackRequests.length === 0 ? (
+        <div
+          className={`flex flex-col px-6 pt-6 pb-16 ${
+            isMobileNavOpen ? `h-screen` : ``
+          }`}
+        >
+          {filteredRequests.length === 0 ? (
             <EmptyFeedback />
           ) : (
-            productFeedbackRequests.map((request) => (
+            filteredRequests.map((request: Request) => (
               <FeedbackCard key={request.id} feedbackRequest={request} />
             ))
           )}
