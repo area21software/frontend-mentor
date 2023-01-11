@@ -6,7 +6,7 @@
 
 - The purpose of this repo is to work on frontend challenges and complete them in html, css and javascript or whatever framework/frontend tool I'd like to learn more about.
 
-### Product Feedback App [In-Progress](https://remarkable-torte-aa86ca.netlify.app/)
+### Product Feedback App [Demo In-Progress](https://unrivaled-sprinkles-d441b7.netlify.app/)
 
 - Technologies
   - **Typescript**, **React JS**, **Tailwind CSS**, **Parcel**
