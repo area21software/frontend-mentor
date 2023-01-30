@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 import { HiMenuAlt3 } from "react-icons/hi"
 import { AiOutlineClose } from "react-icons/ai"
 
 import { Request } from "../model/Request"
+import feedbackAPI from "../api/feedbackAPI"
 
 import NavigationBar from "./NavigationBar"
 import SuggestionHeader from "./SuggestionHeader"
@@ -17,10 +18,25 @@ const data = require("../data.json")
 const Home = () => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-  const [filteredRequests, setFilteredRequests] = useState(data.productRequests)
+  const [productFeedbackRequests, setProductFeedbackRequests] = useState<
+    Request[]
+  >([])
+  const [filteredRequests, setFilteredRequests] = useState(
+    productFeedbackRequests
+  )
 
   //   const productFeedbackRequests: Request[] = []
-  const productFeedbackRequests: Request[] = data.productRequests
+  //   const productFeedbackRequests: Request[] = data.productRequests
+
+  useEffect(() => {
+    const getFeedback = async () => {
+      const feedback = await feedbackAPI.getAllFeedback()
+      setProductFeedbackRequests(feedback)
+      setFilteredRequests(feedback)
+    }
+
+    getFeedback()
+  }, [])
 
   const toggleMobileNav = () => {
     setIsMobileNavOpen((prev) => !prev)
@@ -35,7 +51,7 @@ const Home = () => {
       setFilteredRequests(productFeedbackRequests)
     } else {
       const filteredRequests = productFeedbackRequests.filter(
-        (request) =>
+        (request: Request) =>
           request.category.toLowerCase() === selectedCategory.toLowerCase()
       )
       setFilteredRequests(filteredRequests)
