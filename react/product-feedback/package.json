@@ -1,0 +1,14 @@
+{
+    "name": "product-feedback",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "install-server": "npm install --prefix server",
+        "dev-server": "npm run dev --prefix server",
+        "dev-client": "npm run dev --prefix client"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

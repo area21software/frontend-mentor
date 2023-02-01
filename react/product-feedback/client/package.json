@@ -1,29 +1,29 @@
 {
-  "name": "product-feedback",
-  "version": "1.0.0",
-  "description": "",
-  "source": "src/index.html",
-  "scripts": {
-    "dev": "parcel",
-    "build": "parcel build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
-    "react-router-dom": "^6.6.1"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.17",
-    "@types/react": "^18.0.26",
-    "@types/react-dom": "^18.0.9",
-    "autoprefixer": "^10.4.13",
-    "parcel": "^2.8.2",
-    "postcss": "^8.4.20",
-    "process": "^0.11.10",
-    "tailwindcss": "^3.2.4"
-  }
+    "name": "product-feedback",
+    "version": "1.0.0",
+    "description": "",
+    "source": "src/index.html",
+    "scripts": {
+        "dev": "parcel",
+        "build": "parcel build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-icons": "^4.7.1",
+        "react-router-dom": "^6.6.1"
+    },
+    "devDependencies": {
+        "@types/node": "^18.11.17",
+        "@types/react": "^18.0.26",
+        "@types/react-dom": "^18.0.9",
+        "autoprefixer": "^10.4.13",
+        "parcel": "^2.8.2",
+        "postcss": "^8.4.20",
+        "process": "^0.11.10",
+        "tailwindcss": "^3.2.4"
+    }
 }
